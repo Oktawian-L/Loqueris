@@ -6,11 +6,18 @@ def sub(num1,num2):
     return num1 - num2
 
 def main():
-    try:
-        operar = input("choose 1,2,3,4")
-    except:
-        print 'nieprawidlowa komenda',
-        return #exit the program w/w arguemnts
+    #czy udalo sie wprowadzic dane
+    validInput = False
+    while not validInput:           
+        try:
+            operar = input("choose 1,2,3,4")
+            validInput = True
+        except:
+            print 'nieprawidlowa komenda',
+            return #exit the program w/w arguemnts
+
+
+
     if (operar == 1):
         print(add(12,3))
     elif(operar == 2):
